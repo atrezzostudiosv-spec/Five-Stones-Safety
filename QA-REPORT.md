@@ -33,3 +33,8 @@
 
 ## Next pre-production checks
 Perform visual and interaction tests in a live browser at all four breakpoints, verify original YouTube and PDF hosting, review official credentials and current legal claims, and confirm image redistribution rights.
+## ATREZZO Veil — integración estática 12 noviembre 2026
+- Los 77 HTML existentes fueron modificados conservando todo su contenido para incorporar hoja de estilos, preflight en HEAD y motor original justo antes de `assets/site.js`.
+- `assets/site.js` activa `ATZ-PGT-001` únicamente para navegación interna pertinente, sin interceptar formularios ni anclas.
+- Se mantiene `noindex,nofollow` y las restricciones de los formularios de demostración.
+- **No probado aún en navegador real:** salida/entrada con historial, bfcache, reduced-motion, 375/768/1024/1440, visualización del bento, PDF, videos y compatibilidad móvil. No se declara lanzamiento de producción.

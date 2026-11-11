@@ -18,3 +18,8 @@ All forms are UI-only and do not collect or transmit data. Video embeds are inte
 See `ATREZZO-SITE-MAP.json` for original URL mapping and media IDs. See `QA-REPORT.md` for completed and remaining checks.
 ## Atrezzo — integración directa (12 noviembre 2026)
 Se ha incorporado **ATZ-SVC-001** al Home mediante sus archivos de librería originales, usando bento 1+4 en escritorio, scroll-snap y flechas de teclado en móvil y reveal original con reduced motion. Se conserva el contenido de los cuatro escenarios existentes y todos sus destinos internos. Los colores, fotografías locales y tipografía se adaptan con CSS específico de Five Stones, sin copiar trabajos ni medios de Tri-Lane. **Integración visual y funcional en navegador real: pendiente de QA**, estado `validation` / `client_ready:false`. Se mantienen ATZ-MOT-001 y ATZ-MOT-006.
+
+## Navegación ATREZZO Veil, 12 noviembre 2026
+- **ATZ-PGT-001:** CSS, motor y preflight originales de ATREZZO TRANSITIONS 01 integrados en los 77 documentos HTML con rutas relativas según profundidad de carpeta.
+- El inicializador compartido selecciona navegación primaria, footer, tarjetas editoriales y CTA internos. No modifica clics externos, anclas, descargas ni formularios. Transición original 480 ms de entrada y 560 ms de salida, Web Animations API, sin GSAP ni scroll forzado. Funciona sin JavaScript como navegación nativa y respeta reduced motion.
+- **Inventario de componentes originales integrados:** ATZ-MOT-001, ATZ-MOT-006, ATZ-SVC-001, ATZ-PGT-001. Revisión responsive real, Safari/Firefox, continuidad de historial y producción siguen sin verificación; estado `validation`.

@@ -61,3 +61,31 @@ const atzService=document.querySelector('[data-atz-id="ATZ-SVC-001"]');
 if(atzService)import('../components/servicios/ATZ-SVC-001.js')
  .then(({mount})=>mount(atzService))
  .catch(error=>console.warn('ATZ-SVC-001 unavailable; static content remains visible',error));
+
+
+/* ATZ-PGT-001 — original ATREZZO Veil motor shared by all 77 document routes.
+   Animate meaningful internal navigation only. Keep anchors, form submits,
+   external links, downloads and browser history native. */
+if(window.AtrezzoTransitions){
+ const atrezzoLinks=document.querySelectorAll([
+  '.brand','.desktop-nav a','.mobile-menu a','.header-cta',
+  '.site-footer .footer-column a','.site-footer .footer-bottom a',
+  '.editorial-card','.post-card','.btn[href]','.inline-arrow[href]',
+  '.atz-svc__card a','.atz-svc__bottom a'
+ ].join(','));
+ atrezzoLinks.forEach(link=>{
+  if(link.hasAttribute('download')||(link.target&&link.target!=='_self'))return;
+  try{
+   const destination=new URL(link.href,location.href);
+   if(!['https:','http:','file:'].includes(destination.protocol))return;
+   if(destination.origin!==location.origin)return;
+   if(destination.pathname===location.pathname&&destination.search===location.search)return;
+   link.dataset.atzLink='';
+   link.dataset.atzEffect='veil';
+  }catch(_){/* Native navigation remains available. */}
+ });
+ window.fiveStonesPageTransition=new window.AtrezzoTransitions({
+  defaultEffect:'veil',coverColor:'#102e30',coverMs:480,
+  revealMs:560,showLabel:false
+ });
+}
