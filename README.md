@@ -1,25 +1,36 @@
-# Five Stones Safety — ATREZZO Design Demo V1
+# Five Stones Safety — ATREZZO Rebuild / Review Concept
 
-**State:** Client review only. Not a production website. No approved deployment of the original domain.
+This repository is the **fully navigable ATREZZO redesign concept** for the Five Stones Safety website. It is not the live production domain.
 
-## What is included
-- Six HTML pages: Home, Our Approach, Customer Stories, Resources, Contact / Schedule a Demo, Technical Support.
-- Shared styles.css and script.js.
-- Source-grounded content adapted from the authorized Five Stones Safety website capture.
-- Metadata with noindex,nofollow until approval.
+## Experience and scope
 
-## Forms
-Contact and technical support forms are intentionally NON-FUNCTIONAL demos. Client-side validation and an informational dialog illustrate the expected experience. No action URL, CRM, email recipient, database, analytics or data collection endpoint is configured. User-entered values are not transmitted or stored.
+- 77 directly addressable HTML routes, including the complete top-level navigation, five-stages approach, safety platform, emergency use cases, district video stories, original resource/partnership information, blog index, four complete source articles, category/tag archives and legacy route aliases.
+- Five video IDs recovered from original source, playable in-page via click-to-load YouTube embeds.
+- Resources are available as **internal viewer pages**, with the PDF still fetched from its original Five Stones Safety file host inside an iframe until assets can be fully self-hosted for production.
+- Contact, demo request and technical support forms are **interactive demos only**: validation and preview acknowledgement, **no outgoing requests, email, CRM connection, persistence, analytics or ticket generation**.
+- Header, footer, cards, article routes, calls to action and internal navigation link only to pages created in this repository; no outbound navigation to the former Squarespace site.
+- Original ATREZZO components integrated by exact identifier: `ATZ-MOT-001` and `ATZ-MOT-006`, adapted to Five Stones Safety's content and palette. No decorative overuse or global smooth-scroll dependencies.
+- Designed as responsive desktop/tablet/mobile layouts. Actual visual browser inspection still must be completed; see QA report.
 
-## Media
-This GitHub code preview references original public Squarespace CDN images and public documents for presentation. The separate downloadable offline ZIP **Five-Stones-Safety-DEMO-V1.zip** contains local copies of the selected images and seven downloaded PDF documents. Third-party media rights and original-resolution assets remain subject to final pre-launch review.
+## Files
 
-## Viewing
-After GitHub Pages is enabled for main / (root), index.html can serve as a preview. Its live deployment has **not** yet been verified; do not advertise a live site URL before checking it.
-An offline ZIP is also available for the client presentation.
+- `index.html` — Home
+- `safety-platform/index.html`, `our-approach/index.html`, `use-cases/index.html` — core content
+- `customer-stories/index.html`, `videos/index.html` — district proof and media
+- `resources/index.html`, `resources/document/*` — internal resource library
+- `school-safety-security/index.html`, `school-safety-security/*/index.html` — full journal and archives
+- `contact/index.html`, `contactus/index.html`, `techsupport/index.html` — preview-only forms
+- `assets/site.css`, `assets/site.js` — project identity and interactions
+- `components/motion/` — imported original library source and runtime
+- `ATREZZO-SITE-MAP.json` — original routes, migration map, article and video inventory
+- `QA-REPORT.md` — test results and unverified items
 
-## ATREZZO Component Library
-Component candidates selected: ATZ-MOT-001 (Text Reveal), ATZ-MOT-006 (Editorial Journey) and ATZ-SEC-002 (Split). They have **not** yet been integrated or client-QA certified. First approve the Home layout, then integrate only the components justified by the design, preserving their official code and accessibility rules.
+## Source integrity
 
-## QA / publication
-Static markup, route existence and JavaScript syntax have been checked locally. Full visual testing at 375/768/1024/1440, interactive keyboard testing, media verification and form integrations are pending. No DNS changes; original client website remains intact.
+Business descriptions, published stories and article texts are derived from the authorized full capture of `https://fivestonessafety.com/` dated November 10, 2026. The design deliberately avoids new unsupported metrics or certifications. Existing credential badges are labelled as source-site statements pending revalidation.
+
+Photographs are initially served from original public Squarespace image URLs; the offline distribution includes local fallbacks. Original videos play in on-site iframes; no buttons navigate to external websites. Before a commercial production launch, the media should be fully hosted and licensing, responsive runtime, keyboard behavior, video embeds, PDF frames and SEO indexing rechecked.
+
+## GitHub Pages
+
+Use Settings → Pages → Deploy from branch `main` / `(root)`. The preview path is the repository Pages URL; no DNS changes are made. All pages are marked `noindex,nofollow` during client review.

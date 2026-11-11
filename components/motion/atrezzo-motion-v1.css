@@ -1,0 +1,102 @@
+/* ATREZZO Motion Library V1 — seven isolated visual patterns.
+ * Source parameters from authorized original motion library.
+ * No global html/body modifications, no customer photography.
+ */
+.atz-motion-v1{--am-ease-out:cubic-bezier(.16,1,.3,1);--am-ease-inout:cubic-bezier(.87,0,.13,1);color:#f3f1e9;background:#111c21;position:relative;font-family:Inter,system-ui,sans-serif;isolation:isolate}
+.atz-motion-v1,.atz-motion-v1 *,.atz-motion-v1 *:before,.atz-motion-v1 *:after{box-sizing:border-box}
+.atz-motion-v1 h2,.atz-motion-v1 h3,.atz-motion-v1 p{margin:0}
+.atz-motion-v1 .am-small{font:700 11px/1.5 Inter,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.atz-motion-v1 .am-lead{font:400 clamp(36px,6vw,90px)/1.04 Georgia,serif;letter-spacing:-.065em}
+.atz-motion-v1 .am-note{font-size:14px;line-height:1.8;max-width:510px;color:#c6d2cb}
+.atz-motion-v1 .am-intro{min-height:55svh;display:flex;flex-direction:column;justify-content:center;gap:23px;padding:clamp(32px,7vw,110px);background:#152a2a}
+.atz-motion-v1 .am-ending{min-height:43svh;display:flex;flex-direction:column;justify-content:center;gap:17px;padding:clamp(32px,7vw,110px);background:#10191e}
+.atz-motion-v1 .am-ending h3{font:400 clamp(32px,5vw,72px)/1 Georgia,serif;letter-spacing:-.05em;max-width:940px}
+.atz-motion-v1 .am-abstract{display:block;width:100%;height:100%;background:radial-gradient(ellipse at 70% 20%,#d5c5a4,#618686 44%,#172c39 94%);position:relative;overflow:hidden}
+.atz-motion-v1 .am-abstract:before{position:absolute;content:"";width:70%;height:160%;top:-25%;left:-20%;background:linear-gradient(90deg,#f2e4d08a,transparent 55%);transform:skew(-26deg)}
+.atz-motion-v1 .am-abstract:after{position:absolute;content:"";width:50%;height:110%;right:-20%;top:-10%;border:2px solid #e7f2e462;transform:rotate(16deg)}
+.atz-motion-v1 .am-abstract.alt-1{background:linear-gradient(135deg,#162932,#a2ad9f 40%,#d1b9a0 63%,#40555a)}
+.atz-motion-v1 .am-abstract.alt-2{background:radial-gradient(ellipse at 40% 22%,#d5d8c7,#748f8d 45%,#153a49)}
+.atz-motion-v1 .am-abstract.alt-3{background:linear-gradient(140deg,#d4beaa,#375a69 44%,#0e2932 81%)}
+.atz-motion-v1 .am-abstract.alt-4{background:linear-gradient(210deg,#bbcdb9,#729b90 45%,#234044 80%)}
+.atz-motion-v1 .am-abstract.alt-5{background:linear-gradient(30deg,#21313f,#8da3aa 48%,#d6bca0)}
+.atz-motion-v1[data-atz-id="ATZ-MOT-001"] .am-reveal-stage,.atz-motion-v1[data-atz-id="ATZ-MOT-002"] .am-reveal-stage{min-height:130svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(30px,8vw,140px);gap:24px;background:#e4e3d8;color:#1b332b}
+.atz-motion-v1[data-atz-id="ATZ-MOT-002"] .am-reveal-stage{min-height:160svh;background:#173135;color:#f5ebdd}
+.atz-motion-v1 .am-reveal-stage [data-am-text]{font:400 clamp(46px,8vw,125px)/1.01 Georgia,serif;letter-spacing:-.065em;max-width:1200px}
+.atz-motion-v1 [data-am-text] .am-text__visual{display:inline}
+.atz-motion-v1 [data-am-text] .am-word{display:inline-block;white-space:nowrap}
+.atz-motion-v1 [data-am-text][data-am-ready] .am-char{display:inline-block;transform-origin:50% 60%;opacity:0;transform:translateY(-20%) scaleX(.7);transition:opacity 1.2s var(--am-ease-out) var(--am-delay,0ms),transform 1.2s var(--am-ease-out) var(--am-delay,0ms)}
+.atz-motion-v1 [data-am-text].am-inview .am-char{opacity:1;transform:translateY(0) scaleX(1)}
+.atz-motion-v1 [data-am-text="scrub"][data-am-ready] .am-char{transition:none}
+.atz-motion-v1[data-atz-id="ATZ-MOT-003"] .am-parallax-stage{min-height:110svh;padding:12svh clamp(25px,7vw,110px);display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:6vw;background:#e6e6dc;color:#1b3531}
+.atz-motion-v1 .am-parallax-stage .am-note{color:#52655d;margin-top:23px}
+.atz-motion-v1 [data-am-parallax]{overflow:hidden;height:min(75svh,750px);min-height:460px}
+.atz-motion-v1 [data-am-parallax] > :first-child{width:100%;height:100%;object-fit:cover;transform:translate3d(0,var(--am-y,0px),0) scale(var(--am-scale,1));will-change:transform}
+.atz-motion-v1 [data-am-home-hero]{position:relative;height:210svh;isolation:isolate;background:#e9e0d3}
+.atz-motion-v1 .am-hero__sticky{position:sticky;top:0;height:100svh;overflow:hidden;background:#e4ddcf;color:#1c2d2c}
+.atz-motion-v1 .am-hero__scene{position:absolute;inset:0}
+.atz-motion-v1 .am-hero__media{position:absolute;overflow:hidden;--am-x:0px;--am-y:0px;--am-scale:1;transform:translate3d(var(--am-x),var(--am-y),0) scale(var(--am-scale));will-change:transform;border:1px solid #f8f8ec3d}
+.atz-motion-v1 .am-hero__media .am-abstract{transform:scale(var(--am-inner-scale,1))}
+.atz-motion-v1 .am-hero__media--center{z-index:2;left:31%;top:25%;width:38%;height:50%;--am-scale:.4;background:#253536}
+.atz-motion-v1 .am-hero__media[data-am-media-index="0"]{left:5%;top:9%;width:19%;height:27%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="1"]{left:33%;top:3%;width:18%;height:22%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="2"]{right:5%;top:7%;width:19%;height:30%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="3"]{left:10%;bottom:8%;width:22%;height:27%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="4"]{right:10%;bottom:9%;width:23%;height:27%}
+.atz-motion-v1 [data-am-home-hero][data-am-ready] .am-hero__media{animation:am-v1-hero-enter 3s var(--am-ease-out) both;animation-delay:calc(var(--am-index,0)*.1s)}
+@keyframes am-v1-hero-enter{from{opacity:0;clip-path:inset(30px)}to{opacity:1;clip-path:inset(0)}}
+.atz-motion-v1 .am-hero__title{position:absolute;inset:auto 5% 10%;z-index:4;color:#12252b;mix-blend-mode:difference;font:400 clamp(40px,6vw,98px)/.99 Georgia,serif;letter-spacing:-.065em;pointer-events:none}
+.atz-motion-v1 .am-hero__progress{position:absolute;bottom:0;left:0;width:100%;height:3px;background:#886a42;transform:scaleX(var(--am-progress,0));transform-origin:left;z-index:5}
+.atz-motion-v1 [data-am-wedding-hero]{position:relative;height:220svh;background:#e4e2d9}
+.atz-motion-v1 .am-wedding-hero__sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
+.atz-motion-v1 .am-wedding-hero__clip{position:absolute;inset:0;clip-path:inset(42%);overflow:hidden;background:#183e48}
+.atz-motion-v1 .am-wedding-hero__clip .am-abstract{transform:scale(.2)}
+.atz-motion-v1 .am-wedding-hero__line{position:absolute;z-index:2;font:400 clamp(30px,7vw,110px)/1 Georgia,serif;letter-spacing:-.055em;color:#17312f;transform:translateY(30px);opacity:0;animation:am-v1-hero-text 1.4s var(--am-ease-inout) 1s forwards}
+.atz-motion-v1 .am-wedding-hero__line.line-a{top:8%;left:7%}
+.atz-motion-v1 .am-wedding-hero__line.line-b{top:22%;right:10%}
+.atz-motion-v1 .am-wedding-hero__line.line-c{bottom:20%;left:7%}
+.atz-motion-v1 .am-wedding-hero__line.line-d{bottom:8%;right:8%}
+@keyframes am-v1-hero-text{to{opacity:1;transform:translateY(0)}}
+.atz-motion-v1 .am-wedding-hero__subtitle{position:absolute;z-index:3;bottom:5%;left:5%;color:#f8f7ed;font-weight:700;opacity:0}
+.atz-motion-v1 [data-am-journey]{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:start;padding:80px clamp(25px,6vw,100px);background:#e9e8df;color:#1b3733}
+.atz-motion-v1 .am-journey__sticky{position:sticky;top:8svh;height:80svh;overflow:hidden;background:#263d3b}
+.atz-motion-v1 [data-am-journey-frame]{position:absolute;inset:0;clip-path:inset(100% 0 0);opacity:0;transition:clip-path .8s var(--am-ease-out),opacity .2s}
+.atz-motion-v1 [data-am-journey-frame].am-active{clip-path:inset(0);opacity:1}
+.atz-motion-v1 [data-am-journey-counter]{position:absolute;z-index:2;bottom:25px;left:30px;color:#fff;font:400 60px Georgia,serif}
+.atz-motion-v1 [data-am-journey-step]{min-height:82svh;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:25px}
+.atz-motion-v1 [data-am-journey-step] h3{font:400 clamp(36px,4vw,62px)/1.1 Georgia,serif;letter-spacing:-.05em}
+.atz-motion-v1 [data-am-journey-step] p{max-width:460px;line-height:1.75;color:#53665d}
+.atz-motion-v1 .am-step-image{display:none;height:280px;margin-bottom:15px}
+.atz-motion-v1 [data-am-burned]{height:min(78svh,740px);min-height:480px;overflow:hidden}
+.atz-motion-v1 [data-am-burned] > .am-abstract{filter:brightness(var(--am-brightness,1.3)) contrast(var(--am-contrast,2)) sepia(var(--am-sepia,.2));transform:translateY(var(--am-burned-y,0px)) scale(1.1)}
+.atz-motion-v1 .am-burned-layout{background:#e4e3d9;color:#183231;padding:clamp(30px,6vw,85px);display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;min-height:115svh}
+.atz-motion-v1 .am-burned-layout .am-note{color:#546b60;margin-top:20px}
+@media(max-width:1100px){
+.atz-motion-v1 [data-am-home-hero]{height:170svh}
+.atz-motion-v1 .am-hero__media--center{left:18%;top:31%;width:64%;height:39%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="0"]{left:0;top:12%;width:32%;height:19%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="1"]{left:37%;top:7%;width:24%;height:18%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="2"]{right:0;top:15%;width:29%;height:18%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="3"]{left:5%;bottom:8%;width:33%;height:22%}
+.atz-motion-v1 .am-hero__media[data-am-media-index="4"]{right:3%;bottom:8%;width:33%;height:22%}
+.atz-motion-v1 [data-am-journey]{display:block}
+.atz-motion-v1 .am-journey__sticky{display:none}
+.atz-motion-v1 [data-am-journey-step]{min-height:60svh}
+.atz-motion-v1 .am-step-image{display:block}
+.atz-motion-v1 .am-parallax-stage,.atz-motion-v1 .am-burned-layout{grid-template-columns:1fr}
+.atz-motion-v1 [data-am-parallax],.atz-motion-v1 [data-am-burned]{height:56svh;min-height:360px}
+.atz-motion-v1 .am-wedding-hero__line{font-size:clamp(29px,9vw,70px)}
+}
+@media(max-width:600px){
+.atz-motion-v1 .am-reveal-stage [data-am-text]{font-size:clamp(46px,11vw,70px)}
+.atz-motion-v1 [data-am-journey]{padding:40px 17px}
+.atz-motion-v1 [data-am-journey-step]{padding:25px 10px}
+.atz-motion-v1 .am-hero__title{font-size:clamp(35px,9vw,62px)}
+}
+@media(prefers-reduced-motion:reduce){
+.atz-motion-v1 [data-am-text][data-am-ready] .am-char{opacity:1!important;transform:none!important;transition:none!important}
+.atz-motion-v1 [data-am-parallax] > :first-child,.atz-motion-v1 .am-hero__media,.atz-motion-v1 [data-am-burned] > .am-abstract{transform:none!important;filter:none!important;animation:none!important}
+.atz-motion-v1 [data-am-wedding-hero] .am-wedding-hero__clip{clip-path:none!important}
+.atz-motion-v1 [data-am-wedding-hero] .am-wedding-hero__line{animation:none!important;transform:none!important;opacity:1!important}
+.atz-motion-v1 [data-am-journey-frame].am-active{clip-path:none!important}
+.atz-motion-v1 [data-am-home-hero] .am-hero__title,.atz-motion-v1 .am-wedding-hero__subtitle{opacity:1!important;transform:none!important}
+}
