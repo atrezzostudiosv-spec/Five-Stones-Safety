@@ -1,0 +1,37 @@
+name: Five Stones browser QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'assets/**'
+      - 'components/**'
+      - 'tests/**'
+      - '.github/workflows/browser-qa.yml'
+  workflow_dispatch:
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve the local site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/fivestones-http.log 2>&1 &
+          sleep 2
+      - name: Verify page composition and navigation
+        run: node tests/browser-qa.mjs
+      - name: Preserve responsive screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-stones-responsive-screenshots
+          path: artifacts/qa
+          if-no-files-found: ignore
