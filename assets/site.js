@@ -56,3 +56,8 @@ const search=document.getElementById('blog-search');search?.addEventListener('in
 document.querySelectorAll('img[data-fallback]').forEach(img=>{
  const fallback=()=>{const local=img.dataset.fallback;if(local&&img.src!==new URL(local,location.href).href){img.removeAttribute('data-fallback');img.src=local;}};img.addEventListener('error',fallback,{once:true});if(img.complete && img.naturalWidth===0)fallback();
 });
+// Original ATREZZO Service Bento: layout, viewport reveal and mobile scroll-snap.
+const atzService=document.querySelector('[data-atz-id="ATZ-SVC-001"]');
+if(atzService)import('../components/servicios/ATZ-SVC-001.js')
+ .then(({mount})=>mount(atzService))
+ .catch(error=>console.warn('ATZ-SVC-001 unavailable; static content remains visible',error));

@@ -16,3 +16,5 @@ All forms are UI-only and do not collect or transmit data. Video embeds are inte
 
 ## Evidence
 See `ATREZZO-SITE-MAP.json` for original URL mapping and media IDs. See `QA-REPORT.md` for completed and remaining checks.
+## Atrezzo — integración directa (12 noviembre 2026)
+Se ha incorporado **ATZ-SVC-001** al Home mediante sus archivos de librería originales, usando bento 1+4 en escritorio, scroll-snap y flechas de teclado en móvil y reveal original con reduced motion. Se conserva el contenido de los cuatro escenarios existentes y todos sus destinos internos. Los colores, fotografías locales y tipografía se adaptan con CSS específico de Five Stones, sin copiar trabajos ni medios de Tri-Lane. **Integración visual y funcional en navegador real: pendiente de QA**, estado `validation` / `client_ready:false`. Se mantienen ATZ-MOT-001 y ATZ-MOT-006.
