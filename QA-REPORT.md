@@ -38,3 +38,12 @@ Perform visual and interaction tests in a live browser at all four breakpoints, 
 - `assets/site.js` activa `ATZ-PGT-001` únicamente para navegación interna pertinente, sin interceptar formularios ni anclas.
 - Se mantiene `noindex,nofollow` y las restricciones de los formularios de demostración.
 - **No probado aún en navegador real:** salida/entrada con historial, bfcache, reduced-motion, 375/768/1024/1440, visualización del bento, PDF, videos y compatibilidad móvil. No se declara lanzamiento de producción.
+
+## Browser verification update — 12 November 2026 (supersedes earlier runtime-unverified note for tested items)
+- **PASS — GitHub Actions run 43123397331**: real headless Chromium served the site locally and loaded Home at 375, 768, 1024 and 1440px. No document-level horizontal overflow or uncaught page errors detected within test scope.
+- **PASS — 5 bento cards / ATZ-SVC-001** present across all four sizes, with keyboard horizontal navigation demonstrated at 375px.
+- **PASS — ATZ-PGT-001** runtime instantiated on all four Home viewports, with real desktop navigation into Safety Platform; navigation to Our Approach and Videos also validated.
+- **PASS — ATZ-MOT-001 and ATZ-MOT-006** selectors present on their respective pages, and video library play controls retained.
+- **PASS — reduced motion** browser context with accessible Home and bento content.
+- Captures: responsive Home top viewport and Bento at 375/768/1024/1440, plus reduced-motion capture in Actions artifact `five-stones-responsive-screenshots`.
+- **Still pending:** manual screenshot art direction, real mobile devices, Safari, Firefox, Lighthouse, external image/video/PDF playback, production forms and cross-route exhaustive checks. Browser automation passing does not certify pixel-perfect visual quality.
