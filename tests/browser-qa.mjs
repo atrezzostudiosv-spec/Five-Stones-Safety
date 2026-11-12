@@ -68,7 +68,11 @@ try{
   assert.equal(await page.locator('[data-play-video="MkLO21JZ0A0"]').count(),1);
   assert.equal(await page.locator('[data-play-video="qrxofVMK2aY"]').count(),1);
   assert.ok(await page.locator('.fss-hero-requirements').textContent().then(s=>s.includes('Alyssa')));
-  assert.equal(await page.locator('.fss-capability-icon img').count(),12);
+  assert.equal(await page.locator('.fss-capability-icon .fss-icon-crop img').count(),12);
+  await page.locator('.fss-capability-icons').scrollIntoViewIfNeeded();
+  await page.waitForFunction(()=>[...document.querySelectorAll('.fss-capability-icon img')].filter(i=>i.complete&&i.naturalWidth>0).length>=1);
+  assert.equal(await page.locator('.fss-proof-actions a').count(),2);
+  assert.equal(await page.locator('.fss-video-split .video-screen>img').first().evaluate(e=>getComputedStyle(e).objectFit),'cover');
   assert.equal(await page.locator('.fss-platform-diagram img').count(),1);
   assert.equal(await page.locator('.fss-tangible-figure img').count(),1);
   assert.equal(await page.locator('.fss-video-split .video-tile').count(),2);

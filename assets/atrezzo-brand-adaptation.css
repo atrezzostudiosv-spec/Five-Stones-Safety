@@ -242,3 +242,18 @@ No reimplementation of navigation or scroll animation. */
 @media(max-width:960px){.page-home .fss-capability-overview{gap:30px}.page-home .fss-video-split,.page-home .fss-proof-editorial .fss-trust-video{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}.page-home .fss-decision-layout{gap:30px}.page-home .fss-video-copy h2,.page-home .fss-trust-video .proof-intro h2{font-size:clamp(34px,4.8vw,50px)}}
 @media(max-width:760px){.page-home .fss-capability-overview{grid-template-columns:1fr;gap:26px}.page-home .fss-platform-diagram{max-width:270px}.page-home .fss-capability-icons.fss-info-lines{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 13px}.page-home .fss-capability-icon{width:clamp(95px,28vw,145px);margin-bottom:10px}.page-home .fss-capability-icons.fss-info-lines li{padding:5px 0}.page-home .fss-capability-icons.fss-info-lines li>p{font-size:12px}.page-home .fss-home-capabilities .fss-document-links{align-items:flex-start}.page-home .fss-video-split,.page-home .fss-proof-editorial .fss-trust-video{display:flex;flex-direction:column;align-items:stretch;gap:29px}.page-home .fss-video-copy{order:-1}.page-home .fss-video-copy h2,.page-home .fss-trust-video .proof-intro h2{font-size:clamp(37px,9vw,52px);margin:16px 0 19px}.page-home .fss-video-split .video-tile{max-width:none}.page-home .fss-decision-layout{grid-template-columns:1fr;gap:50px}.page-home .fss-decision-layout .section-heading h2{font-size:clamp(35px,8.5vw,52px)}.page-home .fss-result-details .fss-result-grid{grid-template-columns:1fr}.page-home .fss-testimonials{margin-top:45px}.page-home .fss-quote-editorial{padding:24px}.page-home .fss-quote-content{min-height:0}.page-home .fss-quote-editorial .proof-quote-text{font-size:clamp(25px,6.5vw,34px)}.page-home .fss-quote-bottom{gap:15px;flex-wrap:wrap}.page-home .fss-quote-indicators{max-width:none;flex-basis:100%}.page-home .fss-quote-editorial .quote-controls{margin-left:auto}.page-home .btn{padding:12px 15px;gap:14px}}
 @media(prefers-reduced-motion:reduce){.page-home .fss-quote-playing .fss-quote-indicators button[aria-current=true] span:after{animation:none}.page-home .btn,.page-home .btn span{transition:none}}
+
+/* Screenshot-reviewed refinements: clip only the actual original icon drawing,
+   never the baked-in labels. Native 16:9 thumbnails fill the video canvas. */
+.page-home .fss-capability-icon{display:grid;place-items:center;position:relative;width:clamp(138px,13.5vw,194px);aspect-ratio:250/172;overflow:visible;margin:0 auto 12px}
+.page-home .fss-icon-crop{display:block;position:relative;width:var(--crop-width);aspect-ratio:250 / var(--crop-height);overflow:hidden;flex:none}
+.page-home .fss-icon-crop img{position:absolute;width:400%;max-width:none;height:auto;left:calc(var(--icon-col)*-100%);top:var(--crop-top);filter:contrast(1.12)}
+.page-home .fss-capability-icons.fss-info-lines{row-gap:clamp(18px,2vw,32px)}
+.page-home .fss-video-split .video-screen>img{object-fit:cover;object-position:center;filter:brightness(.88)}
+.page-home .fss-video-split .video-screen{background:#081c1e}
+.page-home .fss-proof-actions{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;margin-top:24px}
+.page-home .fss-proof-actions .fss-client-list{margin:0}
+.page-home .header-cta{min-height:44px;align-self:center}
+.page-home .fss-quote-content{justify-content:flex-start;min-height:clamp(220px,20vw,310px)}
+.page-home .fss-quote-editorial .quote-mark{margin-top:28px}
+@media(max-width:760px){.page-home .fss-capability-icon{width:clamp(113px,32vw,147px);margin-bottom:8px}.page-home .fss-capability-icons.fss-info-lines{row-gap:20px}.page-home .fss-quote-content{min-height:0}.page-home .fss-proof-actions{gap:12px 17px}.page-home .fss-proof-actions .btn{margin:0}}
