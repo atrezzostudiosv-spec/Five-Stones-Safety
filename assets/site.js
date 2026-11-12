@@ -74,10 +74,45 @@ const quotes=[
     "context": "Morrow describes broader campus awareness as a key benefit when employees are equipped to call for help."
   }
 ];
-const quoteHost=document.querySelector('[data-quote-carousel]');let quoteIndex=0;
-const updateQuote=()=>{if(!quoteHost)return;const q=quotes[quoteIndex];quoteHost.querySelector('[data-quote-text]').textContent=q.text;quoteHost.querySelector('[data-quote-author]').textContent=q.author;quoteHost.querySelector('[data-quote-role]').textContent=q.role;const context=quoteHost.querySelector('[data-quote-context]');if(context){context.textContent=q.context||'';context.hidden=!q.context;}};
-quoteHost?.querySelector('[data-quote-prev]')?.addEventListener('click',()=>{quoteIndex=(quoteIndex-1+quotes.length)%quotes.length;updateQuote();});
-quoteHost?.querySelector('[data-quote-next]')?.addEventListener('click',()=>{quoteIndex=(quoteIndex+1)%quotes.length;updateQuote();});
+// Extend the existing testimonial carousel: auto-advance only when visible, with
+// explicit pause/play, keyboard/focus and reduced-motion safeguards.
+const quoteHost=document.querySelector('[data-quote-carousel]');
+if(quoteHost){
+ let quoteIndex=0, timer=0, visible=false, hovered=false, focused=false;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let paused=reduced.matches;
+ const content=quoteHost.querySelector('[data-quote-content]');
+ const toggle=quoteHost.querySelector('[data-quote-toggle]');
+ const count=quoteHost.querySelector('[data-quote-count]');
+ const indicators=[...quoteHost.querySelectorAll('[data-quote-select]')];
+ const duration=()=>Math.max(9000, Math.min(24000, 3500+(quotes[quoteIndex].text+' '+(quotes[quoteIndex].context||'')).split(/\s+/).length*310));
+ const stop=()=>{clearTimeout(timer);timer=0;quoteHost.classList.remove('fss-quote-playing')};
+ const schedule=()=>{stop();if(paused||!visible||hovered||focused||document.hidden)return;quoteHost.style.setProperty('--quote-duration',duration()+'ms');void quoteHost.offsetWidth;quoteHost.classList.add('fss-quote-playing');timer=setTimeout(()=>show(quoteIndex+1,false),duration())};
+ const show=(index,manual)=>{quoteIndex=(index+quotes.length)%quotes.length;const q=quotes[quoteIndex];
+ quoteHost.querySelector('[data-quote-text]').textContent=q.text;
+ quoteHost.querySelector('[data-quote-author]').textContent=q.author;
+ quoteHost.querySelector('[data-quote-role]').textContent=q.role;
+ const context=quoteHost.querySelector('[data-quote-context]');if(context){context.textContent=q.context||'';context.hidden=!q.context;}
+ if(count)count.textContent=String(quoteIndex+1).padStart(2,'0')+' / '+String(quotes.length).padStart(2,'0');
+ indicators.forEach((el,i)=>i===quoteIndex?el.setAttribute('aria-current','true'):el.removeAttribute('aria-current'));
+ if(content&&!reduced.matches)content.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:'cubic-bezier(.2,.7,.2,1)'});
+ if(manual){const announcement=quoteHost.querySelector('[data-quote-announcement]');if(announcement)announcement.textContent='Testimonial '+(quoteIndex+1)+' of '+quotes.length+': '+q.author;}
+ schedule();
+ };
+ const updateToggle=()=>{if(!toggle)return;toggle.setAttribute('aria-label',paused?'Play automatic testimonials':'Pause automatic testimonials');toggle.querySelector('span').textContent=paused?'▶':'Ⅱ'};
+ quoteHost.querySelector('[data-quote-prev]')?.addEventListener('click',()=>show(quoteIndex-1,true));
+ quoteHost.querySelector('[data-quote-next]')?.addEventListener('click',()=>show(quoteIndex+1,true));
+ indicators.forEach((el,i)=>el.addEventListener('click',()=>show(i,true)));
+ toggle?.addEventListener('click',()=>{paused=!paused;updateToggle();schedule()});
+ quoteHost.addEventListener('pointerenter',()=>{hovered=true;stop()});
+ quoteHost.addEventListener('pointerleave',()=>{hovered=false;schedule()});
+ quoteHost.addEventListener('focusin',()=>{focused=true;stop()});
+ quoteHost.addEventListener('focusout',e=>{if(!quoteHost.contains(e.relatedTarget)){focused=false;schedule()}});
+ document.addEventListener('visibilitychange',schedule);
+ reduced.addEventListener('change',e=>{paused=e.matches;updateToggle();schedule()});
+ if('IntersectionObserver'in window){new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule()},{threshold:.3}).observe(quoteHost)}else{visible=true;}
+ updateToggle();schedule();
+}
 // Search is entirely local, operates on four reconstructed source articles.
 const search=document.getElementById('blog-search');search?.addEventListener('input',()=>{
  const q=search.value.toLocaleLowerCase().trim();let shown=0;

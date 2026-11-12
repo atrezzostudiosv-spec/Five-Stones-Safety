@@ -63,16 +63,32 @@ try{
   await overflow(page,'home product '+width);
   assert.equal(await page.locator('#platform-capabilities .fss-info-lines li').count(),12);
   assert.equal(await page.locator('#tangible-results .fss-info-lines li').count(),8);
-  assert.equal(await page.locator('#home-compare-spat tbody tr').count(),3);
+  assert.equal(await page.locator('#home-compare-spat .fss-spat-option').count(),3);
   assert.equal(await page.locator('.credentials-grid .fss-credential-badge').count(),4);
   assert.equal(await page.locator('[data-play-video="MkLO21JZ0A0"]').count(),1);
   assert.equal(await page.locator('[data-play-video="qrxofVMK2aY"]').count(),1);
   assert.ok(await page.locator('.fss-hero-requirements').textContent().then(s=>s.includes('Alyssa')));
-  await shot(page,'#platform-capabilities','home-capabilities-'+width);
+  assert.equal(await page.locator('.fss-capability-icon img').count(),12);
+  assert.equal(await page.locator('.fss-platform-diagram img').count(),1);
+  assert.equal(await page.locator('.fss-tangible-figure img').count(),1);
+  assert.equal(await page.locator('.fss-video-split .video-tile').count(),2);
+  const capIcons=page.locator('.fss-capability-icons');await capIcons.scrollIntoViewIfNeeded();
+  assert.equal(await capIcons.evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),width<=760?2:4);
+  await shot(page,'.fss-capability-icons','home-capabilities-'+width);
+  await shot(page,'.fss-film-editorial .fss-video-split','home-meade-film-'+width);
+  const compare=page.locator('#home-compare-spat');
+  await compare.locator('summary').nth(1).click();assert.equal(await compare.locator('details[open]').count(),1);
+  assert.ok(await compare.locator('details').nth(1).evaluate(e=>e.open));
+  await page.locator('.fss-result-details summary').click();assert.equal(await page.locator('.fss-result-details[open] .fss-result-grid li').count(),8);
+  await page.locator('.fss-result-details summary').click();
   await shot(page,'#home-compare-spat','home-comparison-'+width);
   await shot(page,'#tangible-results','home-results-'+width);
   await shot(page,'.fss-trust-video','home-trust-video-'+width);
   await shot(page,'.credentials-grid','home-credentials-'+width);
+  await shot(page,'.fss-quote-editorial','home-testimonials-'+width);
+  assert.equal(await page.locator('[data-quote-select]').count(),6);
+  if(width===1440){await page.mouse.move(0,0);await page.locator('.fss-quote-editorial').scrollIntoViewIfNeeded();await page.waitForTimeout(500);const initial=await page.locator('[data-quote-author]').textContent();await page.waitForFunction(a=>document.querySelector('[data-quote-author]').textContent!==a,initial,{timeout:18000});}
+  await page.locator('[data-quote-toggle]').click();assert.equal(await page.locator('[data-quote-toggle]').getAttribute('aria-label'),'Play automatic testimonials');
   const authors=new Set();
   for(let i=0;i<6;i++){authors.add(await page.locator('[data-quote-author]').textContent());await page.locator('[data-quote-next]').click();}
   assert.equal(authors.size,6,'Six original district perspectives');
