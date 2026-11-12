@@ -24,7 +24,7 @@ const rail=async(page,prefix)=>{
  assert.equal(await page.evaluate(()=>location.hash),'#'+prefix+'-support','Native chapter anchor');
  assert.equal(await root.locator('[data-azn1-rail] a[aria-current="location"]').count(),1);
  assert.equal(await root.locator('[data-azn1-rail] a[aria-current="location"]').getAttribute('href'),'#'+prefix+'-support','Original rail tracks selected chapter');
- assert.equal(await root.locator('img').count(),0,'No unrelated imagery');
+ assert.equal(await root.locator('.fss-original-service-icon').count(),5,'Five original service graphics');assert.equal(await root.locator('img:not(.fss-original-service-icon)').count(),0,'No unrelated imagery');
 };
 try{
  for(const width of sizes){

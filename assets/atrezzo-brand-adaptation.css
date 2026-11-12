@@ -53,3 +53,12 @@ No reimplementation of navigation or scroll animation. */
 
 .hero-brochure{display:inline-flex;margin-top:17px;align-self:flex-start;color:#fff}.case-row[id]{scroll-margin-top:calc(var(--header) + 24px)}
 .fss-response .ss03__visual:has(img[hidden]){background:#102e30}.fss-response .ss03__image[hidden]{display:none!important}
+
+/* Original Five Stones service artwork in the original Chapter Rail visual slot. */
+.fss-chapter .atz-chapter-block{display:grid;grid-template-columns:minmax(0,1fr) clamp(95px,13vw,180px);gap:clamp(18px,3vw,42px);align-items:center}
+.fss-chapter .atz-chapter-visual.fss-service-visual{background:transparent;height:auto;aspect-ratio:1;width:100%;box-shadow:none;margin:0;display:grid;place-items:center}
+.fss-chapter .fss-service-visual:before,.fss-chapter .fss-service-visual:after{display:none}
+.fss-service-visual img{width:82%;height:auto;object-fit:contain}
+.fss-chapter--home .fss-service-visual{max-width:120px;justify-self:end}
+.fss-source-results{margin:42px 0 20px;max-width:960px}.fss-source-results img{width:100%;height:auto;object-fit:contain}.fss-source-results figcaption{font-size:12px;color:#526d66;margin-top:10px}
+@media(max-width:640px){.fss-chapter .atz-chapter-block{grid-template-columns:minmax(0,1fr) 66px;gap:12px;align-items:start}.fss-chapter .atz-chapter-copy h3{overflow-wrap:break-word}.fss-chapter .atz-chapter-visual{align-self:start;margin-top:12px}.fss-service-visual img{width:100%}.fss-source-results{margin:28px 0 14px}}
