@@ -1,0 +1,40 @@
+name: Five Stones SEO and share assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/prepare-seo.py'
+      - '.github/workflows/prepare-seo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image dependencies
+        run: pip install Pillow
+      - name: Prepare local social image, icon assets, metadata and route audit
+        run: python tools/prepare-seo.py
+      - name: Preserve verification artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-stones-seo-audit
+          path: |
+            seo/audit.json
+            seo/sitemap-preview.xml
+            assets/seo/
+            favicon.ico
+      - name: Commit generated site changes
+        run: |
+          git config user.name "Five Stones SEO Builder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Prepare share images, favicons, vector icons and metadata across 77 routes"
+            git push origin HEAD:main
+          fi
