@@ -49,7 +49,7 @@ try{
   await page.waitForTimeout(650);await overflow(page,'platform '+width);
   const split=page.locator('[data-atz-id="ATZ-SEC-009"]');assert.equal(await split.locator('.ss03__chapter').count(),3);
   assert.ok(await split.evaluate(e=>!!e.__atrezzoSS03),'Real Split Narrative runtime mounted');
-  assert.equal(await page.locator('#compare-spat tbody tr').count(),3);
+  assert.equal(await page.locator('#compare-spat tbody tr').count(),3);if(width===375){assert.ok(await page.locator('#compare-spat caption').evaluate(e=>e.getBoundingClientRect().width)>250,'Mobile comparison caption must use full width');}
   assert.equal(await page.locator('.clarity-response').count(),0);
   await shot(page,'#scene-1-title','platform-request-'+width);
   await shot(page,'#scene-2-title','platform-mapping-'+width);

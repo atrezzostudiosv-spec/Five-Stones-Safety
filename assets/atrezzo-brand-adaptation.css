@@ -62,3 +62,6 @@ No reimplementation of navigation or scroll animation. */
 .fss-chapter--home .fss-service-visual{max-width:120px;justify-self:end}
 .fss-source-results{margin:42px 0 20px;max-width:960px}.fss-source-results img{width:100%;height:auto;object-fit:contain}.fss-source-results figcaption{font-size:12px;color:#526d66;margin-top:10px}
 @media(max-width:640px){.fss-chapter .atz-chapter-block{grid-template-columns:minmax(0,1fr) 66px;gap:12px;align-items:start}.fss-chapter .atz-chapter-copy h3{overflow-wrap:break-word}.fss-chapter .atz-chapter-visual{align-self:start;margin-top:12px}.fss-service-visual img{width:100%}.fss-source-results{margin:28px 0 14px}}
+
+/* Mobile: keep the real table caption legible after stacking rows. */
+@media(max-width:760px){.fss-comparison caption{display:block;width:100%;max-width:100%;white-space:normal;overflow-wrap:normal;text-align:left}}
