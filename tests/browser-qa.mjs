@@ -24,6 +24,12 @@ try {
     await page.screenshot({ path: path.join(output, 'home-first-screen-' + width + '.png'), animations: 'disabled' });
     await page.locator('[data-atz-id="ATZ-SVC-001"]').scrollIntoViewIfNeeded();
     await page.screenshot({ path: path.join(output, 'home-bento-' + width + '.png'), animations: 'disabled' });
+    if (width === 375 || width === 1440) {
+      await page.locator('.clarity-delivery').scrollIntoViewIfNeeded();
+      await page.screenshot({path: path.join(output, 'home-delivery-' + width + '.png'), animations:'disabled'});
+      assert.equal(await page.locator('.clarity-delivery__rail li').count(), 5);
+      assert.equal(await page.locator('.clarity-delivery img').count(), 0, 'Do not insert unrelated photo into delivery');
+    }
     if (width === 375) {
       const rail = page.locator('[data-svc-rail]');
       await rail.focus();
@@ -43,6 +49,26 @@ try {
       assert.equal(await page.locator('[data-atz-id="ATZ-MOT-006"]').count(), 1);
       await page.goto(base + 'videos/index.html', { waitUntil: 'domcontentloaded' });
       assert.ok(await page.locator('[data-play-video]').count() > 0, 'Video library lost in-page playback');
+    }
+    if(width===375 || width===1440){
+      await page.goto(base + 'safety-platform/index.html',{waitUntil:'domcontentloaded'});
+      await page.locator('.clarity-response').scrollIntoViewIfNeeded();
+      assert.equal(await page.locator('.clarity-response__stage').count(),3);
+      assert.equal(await page.locator('.mini-case').count(),0);
+      await page.screenshot({path:path.join(output,'platform-response-'+width+'.png'),animations:'disabled'});
+      await page.goto(base + 'our-approach/index.html',{waitUntil:'domcontentloaded'});
+      assert.equal(await page.locator('[data-am-journey-step]').count(),5);
+      assert.equal(await page.locator('[data-am-journey-frame]').count(),5);
+      assert.equal(await page.locator('.capability-band').count(),0,'Duplicative yellow band must be removed');
+      assert.equal(await page.locator('[data-am-journey-step] img').count(),0,'Unrelated stock photos removed from mobile stages');
+      if(width===375){
+        const h=await page.locator('[data-am-journey-step]').last().evaluate(e=>e.getBoundingClientRect().height);
+        assert.ok(h<490,'Mobile support step too tall: '+h);
+      }
+      await page.locator('[data-am-journey-step]').last().scrollIntoViewIfNeeded();
+      await page.screenshot({path:path.join(output,'approach-support-'+width+'.png'),animations:'disabled'});
+      const pageOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+      assert.ok(pageOverflow<=3,'Approach overflows viewport at '+width);
     }
     await context.close();
   }
