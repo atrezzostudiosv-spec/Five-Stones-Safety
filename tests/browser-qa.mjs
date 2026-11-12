@@ -42,6 +42,26 @@ try{
   assert.ok(await page.locator('a[href="resources/document/client-list/index.html"]').count()>0);
   await page.screenshot({path:path.join(output,'home-first-screen-'+width+'.png')});
   await shot(page,'[data-svc-rail]','home-bento-'+width);
+  const product=page.locator('[data-atz-id="ATZ-MOT-003"]');
+  assert.equal(await product.count(),1);
+  assert.equal(await product.locator('.feature-lines>div').count(),3);
+  assert.equal(await product.locator('a').count(),3);
+  assert.equal(await product.locator('.platform-photo-label').count(),0);
+  const productPhoto=product.locator('[data-am-parallax]>.fss-product__image');
+  await productPhoto.scrollIntoViewIfNeeded();
+  await product.locator('[data-am-parallax][data-am-ready]').waitFor({state:'attached'});
+  await page.waitForFunction(()=>{const img=document.querySelector('.fss-product__image');return img.complete&&img.naturalWidth>0});
+  const startY=await product.evaluate(e=>e.getBoundingClientRect().top+scrollY);
+  await page.evaluate(y=>window.scrollTo({top:Math.max(0,y-innerHeight*.65),behavior:'instant'}),startY);await page.waitForTimeout(220);
+  const scaleA=Number(await productPhoto.evaluate(e=>e.style.getPropertyValue('--am-scale')));
+  await page.evaluate(y=>window.scrollTo({top:y+Math.min(300,innerHeight*.32),behavior:'instant'}),startY);await page.waitForTimeout(250);
+  const scaleB=Number(await productPhoto.evaluate(e=>e.style.getPropertyValue('--am-scale')));
+  assert.ok(scaleA>=1&&scaleB>scaleA&&scaleB<=1.2,'Original ATZ-MOT-003 progressive scale at '+width+' '+scaleA+'/'+scaleB);
+  await page.evaluate(y=>window.scrollTo({top:y-85,behavior:'instant'}),startY);await page.waitForTimeout(300);
+  await page.screenshot({path:path.join(output,'home-product-'+width+'.png'),animations:'disabled'});
+  await product.screenshot({path:path.join(output,'home-product-full-'+width+'.png'),animations:'disabled'});
+  await overflow(page,'home product '+width);
+
   if(width===375){const el=page.locator('[data-svc-rail]');await el.focus();const before=await el.evaluate(n=>n.scrollLeft);await page.keyboard.press('ArrowRight');await page.waitForTimeout(550);assert.ok(await el.evaluate(n=>n.scrollLeft)>before);}
   await shot(page,'#home-delivery-implementation','home-delivery-'+width);
   await rail(page,'home-delivery');
@@ -65,6 +85,8 @@ try{
  }
  for(const javaScriptEnabled of [true,false]){
   const context=await browser.newContext({viewport:{width:375,height:812},reducedMotion:'reduce',javaScriptEnabled});const page=await context.newPage();
+  await goto(page,'index.html');assert.equal(await page.locator('[data-atz-id="ATZ-MOT-003"] .feature-lines>div').count(),3);
+  assert.equal(await page.locator('.fss-product__image').evaluate(e=>getComputedStyle(e).transform),'none','Reduced motion / no JS must not animate product');
   await goto(page,'our-approach/index.html');assert.equal(await page.locator('.atz-chapter-block').count(),5);
   await goto(page,'safety-platform/index.html');assert.equal(await page.locator('.ss03__chapter').count(),3);assert.equal(await page.locator('#compare-spat tbody tr').count(),3);
   if(javaScriptEnabled)assert.equal(await page.locator('[data-atz-id="ATZ-SEC-009"]').evaluate(e=>e.__atrezzoSS03.mode),'static');

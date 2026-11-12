@@ -12,7 +12,7 @@ mobile?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 window.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&document.body.classList.contains('menu-open')){closeMenu();menu?.focus();}});
 window.addEventListener('resize',()=>{if(window.innerWidth>1040)closeMenu();});
 // Original ATREZZO components: mount exact IDs with original isolated modules.
-async function mountAtrezzo(){for(const id of ['ATZ-MOT-001','ATZ-MOT-006']){
+async function mountAtrezzo(){for(const id of ['ATZ-MOT-001','ATZ-MOT-003','ATZ-MOT-006']){
  const roots=[...document.querySelectorAll(`[data-atz-id="${id}"]`)];if(!roots.length)continue;
  try{const mod=await import(`../components/motion/${id}.js`);roots.forEach(root=>mod.mount(root));}
  catch(e){console.warn('ATREZZO component not available:',id,e);}
