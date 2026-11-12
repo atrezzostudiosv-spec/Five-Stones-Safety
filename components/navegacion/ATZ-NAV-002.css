@@ -1,0 +1,46 @@
+/* ATZ-NAV-002 — Chapter Rail / isolated from ATREZZO Navigation 01. */
+.atz-chapter{--c-paper:#e7e8de;--c-ink:#16231b;--c-quiet:#566158;--c-accent:#567764;--c-ease:cubic-bezier(.22,1,.36,1);background:var(--c-paper);color:var(--c-ink);font-family:Inter,system-ui,sans-serif;position:relative}
+.atz-chapter *,.atz-chapter *::before,.atz-chapter *::after{box-sizing:border-box}
+.atz-chapter :is(a,button):focus-visible{outline:2px solid #385b40;outline-offset:4px}
+.atz-chapter-intro{min-height:56svh;display:flex;flex-direction:column;justify-content:center;padding:70px clamp(24px,8vw,120px);background:#ccd5c9}
+.atz-chapter-kicker{font-size:10px;letter-spacing:.19em;font-weight:800;color:#456350}
+.atz-chapter-intro h2{font:400 clamp(42px,7.8vw,110px)/.97 Georgia,serif;letter-spacing:-.065em;margin:20px 0 24px}
+.atz-chapter-intro h2 em,.atz-chapter-block h3 em{font-weight:400;color:#698772}
+.atz-chapter-intro p{max-width:560px;line-height:1.75;color:#435749;font-size:15px}
+.atz-chapter-layout{display:grid;grid-template-columns:minmax(190px,26%) minmax(0,1fr);gap:clamp(24px,6vw,96px);padding:0 clamp(22px,7vw,100px);align-items:start}
+.atz-chapter-rail{position:relative;align-self:stretch}
+.atz-chapter-rail-inner{position:sticky;top:20px;padding:70px 0 24px}
+.atz-chapter-links{list-style:none;margin:30px 0 0;padding:0;border-left:1px solid #98a99b}
+.atz-chapter-links a{position:relative;display:flex;align-items:center;gap:18px;padding:16px 24px;color:#536157;text-decoration:none;font-size:14px;transition:color .25s}
+.atz-chapter-links a small{font-weight:700;font-size:10px;letter-spacing:.1em}
+.atz-chapter-links a:before{content:"";position:absolute;top:0;bottom:0;left:-2px;width:3px;background:#2c5a40;transform:scaleY(0);transition:transform .35s}
+.atz-chapter-links a:hover,.atz-chapter-links a.is-active{color:#173a24}.atz-chapter-links a.is-active:before{transform:scaleY(1)}
+.atz-chapter-progress{height:2px;background:#a8b8aa;margin-top:28px;overflow:hidden}.atz-chapter-progress span{display:block;width:0;height:100%;background:#295a36;transition:width .14s linear}
+.atz-chapter-stories{min-width:0}
+.atz-chapter-block{min-height:100svh;padding:85px 0;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(22px,4vw,64px);align-items:center;scroll-margin-top:42px;border-bottom:1px solid #869c8b40}
+.atz-chapter-copy h3{font:400 clamp(45px,6vw,96px)/.98 Georgia,serif;letter-spacing:-.075em;margin:20px 0 26px}
+.atz-chapter-copy p{font:400 clamp(13px,1.35vw,15px)/1.85 Inter,sans-serif;color:#56655d;max-width:420px}
+.atz-chapter-visual{height:min(62svh,660px);width:100%;margin:0;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.atz-chapter-visual:before{content:"";position:absolute;inset:14%;border:1px solid #edf4ed46;transform:rotate(-8deg)}
+.atz-chapter-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0c1f2040,transparent 55%)}
+.azn-chapter-visual-a{background:radial-gradient(circle at 70% 35%,#b9cbbc,#5a8173 38%,#182b37 92%)}
+.azn-chapter-visual-b{background:linear-gradient(125deg,#1b3038,#819d88 40%,#d2c0a2 70%,#3a433e)}
+.azn-chapter-visual-c{background:linear-gradient(155deg,#829b89,#1c3640 45%,#728681 48%,#c5b899)}
+.atz-chapter-block.is-current .atz-chapter-visual{box-shadow:0 20px 60px #14292018}
+@media(max-width:1024px){.atz-chapter-layout{grid-template-columns:1fr;gap:0;padding:0 clamp(18px,5vw,55px)}
+.atz-chapter-rail-inner{top:0;z-index:6;padding:12px 0;background:#e7e8def0;backdrop-filter:blur(14px)}
+.atz-chapter-rail-inner>.atz-chapter-kicker{display:none}
+.atz-chapter-links{display:flex;border-left:0;border-bottom:1px solid #98a99b;margin:0}
+.atz-chapter-links li{flex:1}
+.atz-chapter-links a{padding:14px 8px;justify-content:center;font-size:12px}
+.atz-chapter-links a:before{top:auto;bottom:-2px;left:8%;right:8%;width:auto;height:3px;transform:scaleX(0)}
+.atz-chapter-links a.is-active:before{transform:scaleX(1)}
+.atz-chapter-progress{margin-top:0}
+.atz-chapter-block{scroll-margin-top:115px;min-height:75svh;padding:48px 0}}
+@media(max-width:640px){.atz-chapter-block{grid-template-columns:1fr;gap:26px;min-height:0;padding:65px 0}
+.atz-chapter-block h3{font-size:clamp(46px,12vw,72px)}
+.atz-chapter-visual{height:auto;aspect-ratio:4/3}
+.atz-chapter-links a{gap:5px;font-size:11px}
+.atz-chapter-links a small{font-size:9px}
+.atz-chapter-intro{min-height:54svh}}
+@media(prefers-reduced-motion:reduce){.atz-chapter-links a,.atz-chapter-links a:before,.atz-chapter-progress span{transition:none!important}}
