@@ -107,3 +107,6 @@ document.querySelectorAll('.video-poster').forEach(img=>{
 
 // Original ATREZZO library modules. Use the native source runtime, not a clone.
 for(const [id,path] of [['ATZ-NAV-002','../components/navegacion/ATZ-NAV-002.js'],['ATZ-SEC-009','../components/secciones/ATZ-SEC-009.js']]){const roots=[...document.querySelectorAll('[data-atz-id="'+id+'"]')];if(roots.length)import(path).then(m=>roots.forEach(root=>m.mount(root))).catch(e=>console.warn(id+' static fallback',e));}
+
+// A failed remote video still remains a neutral, unillustrated panel, never a different school.
+document.querySelectorAll('[data-video-still]').forEach(img=>{const hide=()=>{img.hidden=true;};img.addEventListener('error',hide,{once:true});if(img.complete&&!img.naturalWidth)hide();});

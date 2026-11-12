@@ -28,3 +28,11 @@
 @media(max-width:767px){.atz-svc__wrap{width:auto;max-width:none;padding:0 18px}.atz-svc__heading h2{font-size:clamp(42px,11vw,65px)}.atz-svc__heading p{font-size:14px}.atz-svc__feature,.atz-svc__secondary>.atz-svc__card{height:520px;min-height:520px;flex:0 0 min(83vw,350px);width:min(83vw,350px)}.atz-svc__feature h3{font-size:clamp(37px,9vw,52px)}.atz-svc__card h3{font-size:30px}.atz-svc__feature .atz-svc__feature-content{padding:26px}.atz-svc__checks{margin:9px 0 17px}.atz-svc__checks li{padding:2px 0}.atz-svc__bottom{flex-direction:column}.atz-svc__index{margin-bottom:14px}}
 @media(max-width:380px){.atz-svc__feature,.atz-svc__secondary>.atz-svc__card{height:550px;min-height:550px}.atz-svc__feature p{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.atz-svc__card>img{transition:none!important;transform:none!important}}
+
+/* Reuse the four original Five Stones scenario illustrations within the Atrezzo 1+4 component. */
+.atz-svc__secondary .atz-svc__card{background:#123b3c}
+.atz-svc__secondary .atz-svc__card>img.fss-original-case-icon{inset:20px 20px auto auto;width:clamp(58px,5.5vw,95px);height:clamp(58px,5.5vw,95px);object-fit:contain;opacity:1;filter:none;z-index:0;transform:none}
+.atz-svc__secondary .atz-svc__shade{background:none}
+.atz-svc__secondary .atz-svc__content{padding-top:108px}
+.atz-svc__secondary .atz-svc__card:hover>img.fss-original-case-icon{transform:none}
+@media(max-width:767px){.atz-svc__secondary .atz-svc__card>img.fss-original-case-icon{width:120px;height:120px;top:30px;right:24px}.atz-svc__secondary .atz-svc__content{padding-top:158px}.atz-svc__feature,.atz-svc__secondary>.atz-svc__card{height:460px;min-height:460px}}
