@@ -66,7 +66,7 @@ def clean(s):return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',s))).s
 def tag_slug(x):
     x=url.unquote_plus(x).lower().replace("'","-")
     return re.sub(r'[^a-z0-9]+','-',x).strip('-')
-ALIASES={'home/index.html':'index.html','contact-1/index.html':'contactus/index.html','request-demo/index.html':'contactus/index.html','resources-legacy/index.html':'resources/index.html'}
+ALIASES={'home/index.html':'index.html','texasschools/index.html':'index.html','contact-1/index.html':'contact/index.html','request-demo/index.html':'contactus/index.html','resources-legacy/index.html':'school-safety-security/index.html'}
 def canonical_path(p):
     p=ALIASES.get(p,p)
     if p.startswith('school-safety-security/tag/'):
@@ -132,7 +132,7 @@ def metadata(s,p):
     if not desc:
         desc='Explore '+title.split('|')[0].strip()+' from Five Stones Safety, supporting school district emergency preparedness.'
     canonical=route(canonical_path(p)); is_alias=p!=canonical_path(p)
-    robots='index,follow,max-image-preview:large' if args.publish and not is_alias else 'noindex,follow'
+    robots='index,follow,max-image-preview:large' if args.publish and not is_alias and '/tag/' not in p and not p.startswith('resources/document/') else 'noindex,follow'
     is_article=p.startswith('school-safety-security/') and '/tag/' not in p and p!='school-safety-security/index.html'
     s=re.sub(r'<!-- FSS-SEO BEGIN -->[\s\S]*?<!-- FSS-SEO END -->','',s)
     s=re.sub(r'<title>[\s\S]*?</title>',f'<title>{esc(title)}</title>',s,count=1,flags=re.I)
@@ -211,7 +211,8 @@ css_path.write_text(css)
 # Keep public robots allowing crawl of noindex/social metadata; no disallow.
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n'+('Sitemap: '+BASE+'sitemap.xml\n' if args.publish else '# Preview: pages carry noindex; no sitemap advertised.\n'))
 unique=sorted({x['canonical'] for x in report if x['path']==canonical_path(x['path'])})
-sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+esc(x)+'</loc></url>\n' for x in unique)+'</urlset>\n'
+index_candidates=[x for x in unique if '/tag/' not in x and '/resources/document/' not in x]
+sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  <url><loc>'+esc(x)+'</loc></url>\n' for x in index_candidates)+'</urlset>\n'
 (ROOT/'seo').mkdir(exist_ok=True)
 (ROOT/'seo'/'sitemap-preview.xml').write_text(sitemap)
 if args.publish:(ROOT/'sitemap.xml').write_text(sitemap)
@@ -251,7 +252,7 @@ for p,q in parsed.items():
         elif u.fragment and found.suffix=='.html':
             key=found.relative_to(ROOT).as_posix()
             if key in parsed and url.unquote(u.fragment) not in parsed[key].ids:broken.append({'page':p,'target':target,'reason':'missing anchor'})
-summary={'mode':'production' if args.publish else 'preview-noindex','pages':len(report),'canonical_urls':len(unique),'aliases':len(report)-len(unique),'image':'1200x630 JPEG','favicon_sizes':[16,32,48,180,192,512],'missing_local_links':broken,'missing_alt':missing_alt,'h1_issues':headings,'routes':report}
+summary={'mode':'production' if args.publish else 'preview-noindex','pages':len(report),'canonical_urls':len(unique),'aliases':len(report)-len(unique),'production_index_candidates':len(index_candidates),'production_index_policy':'Canonical primary pages and full articles only; tag archives, PDF wrappers and aliases remain noindex until expanded or justified. Preview pages are all noindex.','image':'1200x630 JPEG','favicon_sizes':[16,32,48,180,192,512],'missing_local_links':broken,'missing_alt':missing_alt,'h1_issues':headings,'routes':report}
 (ROOT/'seo'/'audit.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False)+'\n')
 print(json.dumps({k:v for k,v in summary.items() if k!='routes'},ensure_ascii=False))
 assert Image.open(ASSETS/'five-stones-social.jpg').size==(1200,630)

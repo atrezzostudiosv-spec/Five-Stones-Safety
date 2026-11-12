@@ -1,8 +1,8 @@
 {
   "mode": "preview-noindex",
   "pages": 77,
-  "canonical_urls": 37,
-  "aliases": 40,
+  "canonical_urls": 36,
+  "aliases": 41,
   "image": "1200x630 JPEG",
   "favicon_sizes": [
     16,
@@ -27,7 +27,7 @@
       "path": "contact-1/index.html",
       "title": "Continue | Five Stones Safety",
       "description": "Explore a demonstration of CENTEGIX CrisisAlert and the Five Stones Safety approach to school safety implementation, training and support.",
-      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contactus/",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contact/",
       "robots": "noindex,follow"
     },
     {
@@ -139,7 +139,7 @@
       "path": "resources-legacy/index.html",
       "title": "Continue | Five Stones Safety",
       "description": "Legacy route mapped to the new Five Stones Safety site.",
-      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/",
       "robots": "noindex,follow"
     },
     {
@@ -538,7 +538,7 @@
       "path": "texasschools/index.html",
       "title": "Continue | Five Stones Safety",
       "description": "Legacy route mapped to the new Five Stones Safety site.",
-      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/texasschools/",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/",
       "robots": "noindex,follow"
     },
     {
@@ -555,5 +555,7 @@
       "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/videos/",
       "robots": "noindex,follow"
     }
-  ]
+  ],
+  "production_index_candidates": 16,
+  "production_index_policy": "Canonical primary pages and full articles only; tag archives, PDF wrappers and aliases remain noindex until expanded or justified. Preview pages are all noindex."
 }

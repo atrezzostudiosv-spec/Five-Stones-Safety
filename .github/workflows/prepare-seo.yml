@@ -1,10 +1,5 @@
 name: Five Stones SEO and share assets
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/prepare-seo.py'
-      - '.github/workflows/prepare-seo.yml'
   workflow_dispatch:
 permissions:
   contents: write

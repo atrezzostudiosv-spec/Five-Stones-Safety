@@ -1,0 +1,36 @@
+name: Five Stones SEO and Safari QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tests/seo-qa.mjs'
+      - 'assets/seo/**'
+      - 'seo/audit.json'
+      - '**.html'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium and WebKit
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium webkit
+      - name: Serve the site
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/fss-seo-http.log 2>&1 &
+          sleep 2
+      - name: Test metadata and mobile vector icons
+        run: node tests/seo-qa.mjs
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-stones-seo-browser-evidence
+          path: artifacts/seo-qa
+          if-no-files-found: ignore

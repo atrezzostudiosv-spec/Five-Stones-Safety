@@ -53,3 +53,6 @@ Following the approved visual direction, no existing Home sections were removed 
 
 ## Visual QA refinement
 Chromium run 43230850670 passed. Real screenshots showed leftover embedded label fragments in the original icon sheet crops, black thumbnail bars and adjacent CTA spacing. Refined source-specific crop bounds per row, increased icon size, returned video poster framing to 16:9 cover without hover enlargement, grouped trust CTAs, and restored header CTA minimum 44px. Source graphics and approved components unchanged. Follow-up browser run required.
+
+## SEO, social previews and cross-platform UI — 12 Nov 2026
+SEO generation committed by workflow 43243743845. 77 routes retained; 36 canonical destinations, 41 aliases (including corrected meta-refresh destinations). Local static audit reports zero missing local paths/anchors, missing alt attributes or H1 count errors. Original library untouched. Brand social JPEG 1200×630, 16/32/48 favicon, 180 Apple touch and other icon sizes stored in assets/seo. Vector SVG controls replace platform-dependent glyphs. Preview remains noindex,follow; production sitemap is deliberately not announced. See SEO-AUDIT.md and seo/audit.json. WebKit emulation and deployed checks tracked in separate QA.
