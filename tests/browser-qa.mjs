@@ -66,6 +66,9 @@ try {
         assert.ok(h<490,'Mobile support step too tall: '+h);
       }
       await page.locator('[data-am-journey-step]').last().scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1250);
+      if(width===1440) assert.equal(await page.locator('[data-am-journey-frame].am-active').last().getAttribute('aria-hidden'),'false');
+      assert.equal(await page.locator('[data-am-journey-counter]:visible').count(),0,'No double counters over visuals');
       await page.screenshot({path:path.join(output,'approach-support-'+width+'.png'),animations:'disabled'});
       const pageOverflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
       assert.ok(pageOverflow<=3,'Approach overflows viewport at '+width);
