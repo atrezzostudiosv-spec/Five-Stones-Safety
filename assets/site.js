@@ -89,3 +89,16 @@ if(window.AtrezzoTransitions){
   revealMs:560,showLabel:false
  });
 }
+
+// Use the actual video thumbnail for each recovered original video ID.
+// If unavailable, keep a branded neutral preview instead of showing an unrelated school.
+document.querySelectorAll('.video-poster').forEach(img=>{
+ img.addEventListener('error',()=>{
+  img.closest('.video-screen')?.classList.add('video-screen--fallback');
+  img.hidden=true;
+ },{once:true});
+ if(img.complete && img.naturalWidth===0){
+  img.closest('.video-screen')?.classList.add('video-screen--fallback');
+  img.hidden=true;
+ }
+});

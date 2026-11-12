@@ -54,3 +54,8 @@
 .post-journey-evidence-copy p{font-size:15px;line-height:1.75;color:#557069;max-width:560px}
 .post-journey-evidence-copy .btn{margin-top:24px}
 @media(max-width:760px){.post-journey-evidence-grid{grid-template-columns:1fr;gap:37px}.post-journey-evidence-id{min-height:270px;padding:30px}.post-journey-evidence-id>strong{font-size:clamp(70px,20vw,110px)}.post-journey-evidence-copy h2{font-size:clamp(42px,10vw,64px)}.post-journey-evidence-copy p{font-size:14px}}
+
+/* Actual per-video YouTube posters; non-photo fallback if a thumbnail is unavailable. */
+.video-screen--fallback{background:radial-gradient(circle at 75% 12%,#32746b,#163e41 54%,#0b252b)}
+.video-screen--fallback:before{content:"FIVE STONES SAFETY / VIDEO";position:absolute;top:25px;left:25px;color:#d1e7de;font-size:10px;font-weight:800;letter-spacing:.17em;z-index:2;pointer-events:none}
+.video-screen .video-poster[hidden]{display:none!important}
