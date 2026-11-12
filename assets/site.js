@@ -37,15 +37,45 @@ document.querySelectorAll('[data-demo-form]').forEach(form=>form.addEventListene
 }));
 // Home testimonial controls, real source-grounded quotations.
 const quotes=[
- {text:'Our goal is to empower teachers to get help quickly and easily in any type of incident.',author:'Dr. Trig Overbo',role:'Superintendent, Glen Rose ISD'},
- {text:'CrisisAlert enables teachers to focus on the learning environment and gives them the confidence to respond in any situation.',author:'Tommy Corcoran',role:'Assistant Superintendent, Glen Rose ISD'},
- {text:'Our highest priority is keeping our Eagle students and staff safe',author:'Dr. Telena Wright',role:'Former Superintendent, Argyle ISD'},
- {text:'that one time, that is why you have it',author:'Rick Hoover',role:'Director of Special Programs, Marble Falls ISD'},
- {text:'This is the next step in Friendswood ISD’s efforts to create the safest learning environments possible for students and staff.',author:'Thad Roher',role:'Superintendent, Friendswood ISD'},
- {text:'We have 30 different layers of security protocols in our District and the CENTEGIX Safety Platform is our number 1.',author:'Ty Morrow',role:'Executive Director of Safety, Security & Emergency Management, Brazosport ISD'}
+  {
+    "author": "Dr. Trig Overbo",
+    "role": "Superintendent, Glen Rose ISD",
+    "text": "Our goal is to empower teachers to get help quickly and easily in any type of incident.",
+    "context": ""
+  },
+  {
+    "author": "Tommy Corcoran",
+    "role": "Assistant Superintendent, Glen Rose ISD",
+    "text": "CrisisAlert enables teachers to focus on the learning environment and gives them the confidence to respond in any situation.",
+    "context": ""
+  },
+  {
+    "author": "Dr. Telena Wright",
+    "role": "Former Superintendent, Argyle ISD",
+    "text": "CENTEGIX provides a distinctive approach to safety and security solutions to school districts. It meets the rapid communication needs of school leaders.",
+    "context": "She also emphasizes responding to everyday emergencies and protecting students and employees as part of the district’s broader school safety efforts."
+  },
+  {
+    "author": "Rick Hoover",
+    "role": "Director of Special Programs, Marble Falls ISD",
+    "text": "99% of the time this system will not be used for the worst case scenario. But God forbid you need it, that one time, that is why you have it.",
+    "context": ""
+  },
+  {
+    "author": "Thad Roher",
+    "role": "Superintendent, Friendswood ISD",
+    "text": "This is the next step in Friendswood ISD’s efforts to create the safest learning environments possible for students and staff.",
+    "context": "He connects the district’s safety investment to the peace of mind that students and teachers need in order to learn and teach."
+  },
+  {
+    "author": "Ty Morrow",
+    "role": "Executive Director of Safety, Security & Emergency Management, Brazosport ISD",
+    "text": "We have 30 different layers of security protocols in our District and the CENTEGIX Safety Platform is our number 1. The system expanded my safety and security team of 40 to 2,000 because each Brazosport ISD employee now has a badge.",
+    "context": "Morrow describes broader campus awareness as a key benefit when employees are equipped to call for help."
+  }
 ];
 const quoteHost=document.querySelector('[data-quote-carousel]');let quoteIndex=0;
-const updateQuote=()=>{if(!quoteHost)return;const q=quotes[quoteIndex];quoteHost.querySelector('[data-quote-text]').textContent=q.text;quoteHost.querySelector('[data-quote-author]').textContent=q.author;quoteHost.querySelector('[data-quote-role]').textContent=q.role;};
+const updateQuote=()=>{if(!quoteHost)return;const q=quotes[quoteIndex];quoteHost.querySelector('[data-quote-text]').textContent=q.text;quoteHost.querySelector('[data-quote-author]').textContent=q.author;quoteHost.querySelector('[data-quote-role]').textContent=q.role;const context=quoteHost.querySelector('[data-quote-context]');if(context){context.textContent=q.context||'';context.hidden=!q.context;}};
 quoteHost?.querySelector('[data-quote-prev]')?.addEventListener('click',()=>{quoteIndex=(quoteIndex-1+quotes.length)%quotes.length;updateQuote();});
 quoteHost?.querySelector('[data-quote-next]')?.addEventListener('click',()=>{quoteIndex=(quoteIndex+1)%quotes.length;updateQuote();});
 // Search is entirely local, operates on four reconstructed source articles.

@@ -61,6 +61,23 @@ try{
   await page.screenshot({path:path.join(output,'home-product-'+width+'.png'),animations:'disabled'});
   await product.screenshot({path:path.join(output,'home-product-full-'+width+'.png'),animations:'disabled'});
   await overflow(page,'home product '+width);
+  assert.equal(await page.locator('#platform-capabilities .fss-info-lines li').count(),12);
+  assert.equal(await page.locator('#tangible-results .fss-info-lines li').count(),8);
+  assert.equal(await page.locator('#home-compare-spat tbody tr').count(),3);
+  assert.equal(await page.locator('.credentials-grid .fss-credential-badge').count(),4);
+  assert.equal(await page.locator('[data-play-video="MkLO21JZ0A0"]').count(),1);
+  assert.equal(await page.locator('[data-play-video="qrxofVMK2aY"]').count(),1);
+  assert.ok(await page.locator('.fss-hero-requirements').textContent().then(s=>s.includes('Alyssa')));
+  await shot(page,'#platform-capabilities','home-capabilities-'+width);
+  await shot(page,'#home-compare-spat','home-comparison-'+width);
+  await shot(page,'#tangible-results','home-results-'+width);
+  await shot(page,'.fss-trust-video','home-trust-video-'+width);
+  await shot(page,'.credentials-grid','home-credentials-'+width);
+  const authors=new Set();
+  for(let i=0;i<6;i++){authors.add(await page.locator('[data-quote-author]').textContent());await page.locator('[data-quote-next]').click();}
+  assert.equal(authors.size,6,'Six original district perspectives');
+  await overflow(page,'home restored commercial sections '+width);
+
 
   if(width===375){const el=page.locator('[data-svc-rail]');await el.focus();const before=await el.evaluate(n=>n.scrollLeft);await page.keyboard.press('ArrowRight');await page.waitForTimeout(550);assert.ok(await el.evaluate(n=>n.scrollLeft)>before);}
   await shot(page,'#home-delivery-implementation','home-delivery-'+width);
