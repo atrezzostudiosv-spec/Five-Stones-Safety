@@ -45,3 +45,12 @@
 .credentials-section{background:#e8ede5}.credentials-section .section-heading p{max-width:790px}.credentials-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:55px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.credentials-grid>div{display:flex;flex-direction:column;padding:31px 25px 33px;border-right:1px solid var(--line);gap:18px;min-height:190px}.credentials-grid>div:last-child{border:0}.credentials-grid b{font-size:11px;color:#8ea19a;font-weight:800}.credentials-grid strong{font-size:clamp(17px,1.9vw,25px);line-height:1.15;font-family:var(--display);letter-spacing:-.045em}.credentials-grid span{font-size:11px;color:#64796f;margin-top:auto}
 @media(max-width:760px){.credentials-grid{grid-template-columns:1fr 1fr}.credentials-grid>div:nth-child(2){border-right:0}.credentials-grid>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media(max-width:460px){.credentials-grid{grid-template-columns:1fr}.credentials-grid>div{min-height:145px;border-right:0!important;border-bottom:1px solid var(--line)}.credentials-grid>div:last-child{border-bottom:0}}
+/* FSS vector UI icons: no platform-dependent emoji glyphs. */
+.fss-ui-icon{display:inline-block;width:1em;height:1em;min-width:1em;vertical-align:-.12em;flex-shrink:0;overflow:visible;color:inherit}
+.header-cta .fss-ui-icon,.btn .fss-ui-icon,.inline-arrow .fss-ui-icon{width:1.12em;height:1.12em}
+.footer-mark .fss-ui-icon{width:.25em;height:.25em;vertical-align:.12em}
+[data-quote-toggle] .fss-ui-play{display:none}
+[data-quote-toggle][data-quote-paused="true"] .fss-ui-play{display:inline-block}
+[data-quote-toggle][data-quote-paused="true"] .fss-ui-pause{display:none}
+.quote-controls .fss-ui-icon{width:20px;height:20px}
+.atz-svc .atz-svc__checks li::before{content:"";display:inline-block;width:.8em;height:.8em;background:currentColor;color:var(--atz-svc-accent);clip-path:polygon(14% 47%,39% 73%,87% 16%,100% 29%,40% 100%,0 60%);flex-shrink:0}

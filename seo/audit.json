@@ -1,0 +1,559 @@
+{
+  "mode": "preview-noindex",
+  "pages": 77,
+  "canonical_urls": 37,
+  "aliases": 40,
+  "image": "1200x630 JPEG",
+  "favicon_sizes": [
+    16,
+    32,
+    48,
+    180,
+    192,
+    512
+  ],
+  "missing_local_links": [],
+  "missing_alt": [],
+  "h1_issues": [],
+  "routes": [
+    {
+      "path": "contact/index.html",
+      "title": "Contact | Five Stones Safety",
+      "description": "Connect with Five Stones Safety about school safety, technology and implementation.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contact/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "contact-1/index.html",
+      "title": "Continue | Five Stones Safety",
+      "description": "Explore a demonstration of CENTEGIX CrisisAlert and the Five Stones Safety approach to school safety implementation, training and support.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contactus/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "contactus/index.html",
+      "title": "Schedule a Demo | Five Stones Safety",
+      "description": "Explore a demonstration of CENTEGIX CrisisAlert and the Five Stones Safety approach to school safety implementation, training and support.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contactus/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "customer-stories/index.html",
+      "title": "Customer Stories | Five Stones Safety",
+      "description": "Real perspectives from school districts and school leaders featured on the Five Stones Safety website.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/customer-stories/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "general-2/index.html",
+      "title": "Resources & Partnership | Five Stones Safety",
+      "description": "Why Five Stones Safety partners with CENTEGIX and how to evaluate emergency alert systems.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/general-2/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "home/index.html",
+      "title": "School Safety Solutions | Five Stones Safety",
+      "description": "Silent Panic Alarm Technology and safety solutions for schools, adapted from the original Five Stones Safety overview.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "index.html",
+      "title": "School Safety & CENTEGIX CrisisAlert | Five Stones Safety",
+      "description": "Five Stones Safety helps school districts plan, implement and support the CENTEGIX Safety Platform, from wearable emergency alerts to staff training and ongoing service.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "our-approach/index.html",
+      "title": "Our Approach | Five Stones Safety",
+      "description": "Implementation, communications, on-site training, system testing and ongoing service from Five Stones Safety.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/our-approach/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "request-demo/index.html",
+      "title": "Continue | Five Stones Safety",
+      "description": "Explore a demonstration of CENTEGIX CrisisAlert and the Five Stones Safety approach to school safety implementation, training and support.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/contactus/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/centegix-platform-overview/index.html",
+      "title": "CENTEGIX Safety Platform Overview | Five Stones Safety",
+      "description": "An overview of the connected safety platform and its core capabilities.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/centegix-platform-overview/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/client-list/index.html",
+      "title": "Client List | Five Stones Safety",
+      "description": "The original client reference document made available by Five Stones Safety.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/client-list/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/comparing-spat-solutions/index.html",
+      "title": "Comparing SPAT Solutions | Five Stones Safety",
+      "description": "A comparison resource for evaluating different silent panic alert technologies.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/comparing-spat-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/crisisalert-vs-apps/index.html",
+      "title": "CrisisAlert vs. Mobile Apps | Five Stones Safety",
+      "description": "Understand differences in device-based and phone-based emergency alerting.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/crisisalert-vs-apps/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/evaluating-emergency-alert-solutions/index.html",
+      "title": "Evaluating Emergency Alert Solutions | Five Stones Safety",
+      "description": "Key questions to ask when assessing school emergency alert solutions.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/evaluating-emergency-alert-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/finding-value-in-spat/index.html",
+      "title": "Finding Value in SPAT Systems | Five Stones Safety",
+      "description": "Review the factors that contribute to long-term value from a school safety investment.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/finding-value-in-spat/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/document/three-lenses-crisis-worksheet/index.html",
+      "title": "One Incident, Three Lenses | Five Stones Safety",
+      "description": "A crisis worksheet for evaluating one incident from multiple perspectives.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/document/three-lenses-crisis-worksheet/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources/index.html",
+      "title": "Resources | Five Stones Safety",
+      "description": "School safety white papers, comparisons, guides, videos and educational resources.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "resources-legacy/index.html",
+      "title": "Continue | Five Stones Safety",
+      "description": "Legacy route mapped to the new Five Stones Safety site.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/resources/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "safety-platform/index.html",
+      "title": "CENTEGIX Safety Platform | Five Stones Safety",
+      "description": "Discover the CENTEGIX CrisisAlert solution, wearable alerts, dynamic mapping and school safety response.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/safety-platform/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/appsarewhack/index.html",
+      "title": "The 8 Limitations of Phone Based Apps for Emergency Response in Schools | Five Stones Safety",
+      "description": "A closer look at connectivity, accessibility and staff readiness when mobile apps are used for alerts.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/appsarewhack/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/index.html",
+      "title": "Safety & Security Journal | Five Stones Safety",
+      "description": "Guidance and perspectives on school safety, emergency response, student engagement and platform evaluation.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/ktgd9uwujwx5x59suw0jg97l8ha7f7/index.html",
+      "title": "Emergency Response in Under 10 Seconds: Real School Safety Stories from a Texas School | Five Stones Safety",
+      "description": "A documented account of emergency response and preparedness in a Texas school district.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/ktgd9uwujwx5x59suw0jg97l8ha7f7/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/safetyplatformevaluation/index.html",
+      "title": "How to Evaluate School Safety Platforms: A Practical Guide for K–12 Leaders | Five Stones Safety",
+      "description": "What matters when evaluating reliability, alert types, data security, implementation and ongoing support.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/safetyplatformevaluation/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/student-engagement/index.html",
+      "title": "Creating a Culture of Safety Through Student Engagement | Five Stones Safety",
+      "description": "Lessons for National Safe Schools Week: why belonging and participation matter to a safer school culture.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/student-engagement/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Alyssa%27s%20Law/index.html",
+      "title": "Alyssa’s Law | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Alyssa’s Law for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/alyssa-s-law/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Alyssa%27s+Law/index.html",
+      "title": "Alyssa’s Law | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Alyssa’s Law for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/alyssa-s-law/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Alyssa's Law/index.html",
+      "title": "Alyssa’s Law | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Alyssa’s Law for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/alyssa-s-law/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Alyssa's+Law/index.html",
+      "title": "Alyssa’s Law | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Alyssa’s Law for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/alyssa-s-law/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/CENTEGIX/index.html",
+      "title": "CENTEGIX | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on CENTEGIX for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/centegix/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Comprehensive Security/index.html",
+      "title": "Comprehensive Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Comprehensive Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/comprehensive-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Comprehensive%20Security/index.html",
+      "title": "Comprehensive Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Comprehensive Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/comprehensive-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Comprehensive+Security/index.html",
+      "title": "Comprehensive Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Comprehensive Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/comprehensive-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Emergency Response/index.html",
+      "title": "Emergency Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Emergency Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/emergency-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Emergency%20Response/index.html",
+      "title": "Emergency Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Emergency Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/emergency-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Emergency+Response/index.html",
+      "title": "Emergency Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Emergency Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/emergency-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Integrated Security/index.html",
+      "title": "Integrated Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Integrated Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/integrated-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Integrated%20Security/index.html",
+      "title": "Integrated Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Integrated Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/integrated-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Integrated+Security/index.html",
+      "title": "Integrated Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Integrated Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/integrated-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Rapid Incident Response/index.html",
+      "title": "Rapid Incident Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Rapid Incident Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/rapid-incident-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Rapid%20Incident%20Response/index.html",
+      "title": "Rapid Incident Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Rapid Incident Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/rapid-incident-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Rapid+Incident+Response/index.html",
+      "title": "Rapid Incident Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Rapid Incident Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/rapid-incident-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/SPAT/index.html",
+      "title": "SPAT | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on SPAT for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/spat/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety Applications/index.html",
+      "title": "Safety Applications | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Applications for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-applications/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety Experts/index.html",
+      "title": "Safety Experts | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Experts for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-experts/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety Platform/index.html",
+      "title": "Safety Platform | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Platform for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-platform/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety Solutions/index.html",
+      "title": "Safety Solutions | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Solutions for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety%20Applications/index.html",
+      "title": "Safety Applications | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Applications for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-applications/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety%20Experts/index.html",
+      "title": "Safety Experts | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Experts for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-experts/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety%20Platform/index.html",
+      "title": "Safety Platform | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Platform for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-platform/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety%20Solutions/index.html",
+      "title": "Safety Solutions | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Solutions for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety+Applications/index.html",
+      "title": "Safety Applications | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Applications for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-applications/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety+Experts/index.html",
+      "title": "Safety Experts | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Experts for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-experts/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety+Platform/index.html",
+      "title": "Safety Platform | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Platform for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-platform/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Safety+Solutions/index.html",
+      "title": "Safety Solutions | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Solutions for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/School Safety and Security/index.html",
+      "title": "School Safety And Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on School Safety And Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/school-safety-and-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/School%20Safety%20and%20Security/index.html",
+      "title": "School Safety And Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on School Safety And Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/school-safety-and-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/School+Safety+and+Security/index.html",
+      "title": "School Safety And Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on School Safety And Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/school-safety-and-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Silent Panic Alarm Technology/index.html",
+      "title": "Silent Panic Alarm Technology | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Silent Panic Alarm Technology for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/silent-panic-alarm-technology/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Silent%20Panic%20Alarm%20Technology/index.html",
+      "title": "Silent Panic Alarm Technology | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Silent Panic Alarm Technology for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/silent-panic-alarm-technology/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/Silent+Panic+Alarm+Technology/index.html",
+      "title": "Silent Panic Alarm Technology | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Silent Panic Alarm Technology for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/silent-panic-alarm-technology/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/alyssa-s-law/index.html",
+      "title": "Alyssa’s Law | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Alyssa’s Law for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/alyssa-s-law/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/centegix/index.html",
+      "title": "CENTEGIX | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on CENTEGIX for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/centegix/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/comprehensive-security/index.html",
+      "title": "Comprehensive Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Comprehensive Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/comprehensive-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/emergency-response/index.html",
+      "title": "Emergency Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Emergency Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/emergency-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/integrated-security/index.html",
+      "title": "Integrated Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Integrated Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/integrated-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/rapid-incident-response/index.html",
+      "title": "Rapid Incident Response | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Rapid Incident Response for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/rapid-incident-response/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/safety-applications/index.html",
+      "title": "Safety Applications | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Applications for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-applications/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/safety-experts/index.html",
+      "title": "Safety Experts | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Experts for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-experts/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/safety-platform/index.html",
+      "title": "Safety Platform | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Platform for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-platform/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/safety-solutions/index.html",
+      "title": "Safety Solutions | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Safety Solutions for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/safety-solutions/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/school-safety-and-security/index.html",
+      "title": "School Safety And Security | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on School Safety And Security for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/school-safety-and-security/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/silent-panic-alarm-technology/index.html",
+      "title": "Silent Panic Alarm Technology | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on Silent Panic Alarm Technology for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/silent-panic-alarm-technology/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "school-safety-security/tag/spat/index.html",
+      "title": "SPAT | School Safety Insights | Five Stones Safety",
+      "description": "Explore Five Stones Safety articles and insights on SPAT for K–12 school districts and safety leaders.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/school-safety-security/tag/spat/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "techsupport/index.html",
+      "title": "Technical Support | Five Stones Safety",
+      "description": "Find technical support for Five Stones Safety and CENTEGIX school safety systems, including service and troubleshooting assistance.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/techsupport/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "texasschools/index.html",
+      "title": "Continue | Five Stones Safety",
+      "description": "Legacy route mapped to the new Five Stones Safety site.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/texasschools/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "use-cases/index.html",
+      "title": "School Safety Use Cases | Five Stones Safety",
+      "description": "Understand the medical, campus and environmental scenarios discussed by Five Stones Safety.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/use-cases/",
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "videos/index.html",
+      "title": "Video Library | Five Stones Safety",
+      "description": "School safety demonstrations and school district videos from Five Stones Safety.",
+      "canonical": "https://atrezzostudiosv-spec.github.io/Five-Stones-Safety/videos/",
+      "robots": "noindex,follow"
+    }
+  ]
+}

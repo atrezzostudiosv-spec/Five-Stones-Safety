@@ -99,7 +99,7 @@ if(quoteHost){
  if(manual){const announcement=quoteHost.querySelector('[data-quote-announcement]');if(announcement)announcement.textContent='Testimonial '+(quoteIndex+1)+' of '+quotes.length+': '+q.author;}
  schedule();
  };
- const updateToggle=()=>{if(!toggle)return;toggle.setAttribute('aria-label',paused?'Play automatic testimonials':'Pause automatic testimonials');toggle.querySelector('span').textContent=paused?'▶':'Ⅱ'};
+ const updateToggle=()=>{if(!toggle)return;toggle.setAttribute('aria-label',paused?'Play automatic testimonials':'Pause automatic testimonials');toggle.setAttribute('data-quote-paused',String(paused))};
  quoteHost.querySelector('[data-quote-prev]')?.addEventListener('click',()=>show(quoteIndex-1,true));
  quoteHost.querySelector('[data-quote-next]')?.addEventListener('click',()=>show(quoteIndex+1,true));
  indicators.forEach((el,i)=>el.addEventListener('click',()=>show(i,true)));
