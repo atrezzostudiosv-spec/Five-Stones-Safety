@@ -39,6 +39,8 @@ document.querySelectorAll('[data-demo-form]').forEach(form=>form.addEventListene
 const quotes=[
  {text:'Our goal is to empower teachers to get help quickly and easily in any type of incident.',author:'Dr. Trig Overbo',role:'Superintendent, Glen Rose ISD'},
  {text:'CrisisAlert enables teachers to focus on the learning environment and gives them the confidence to respond in any situation.',author:'Tommy Corcoran',role:'Assistant Superintendent, Glen Rose ISD'},
+ {text:'Our highest priority is keeping our Eagle students and staff safe',author:'Dr. Telena Wright',role:'Former Superintendent, Argyle ISD'},
+ {text:'that one time, that is why you have it',author:'Rick Hoover',role:'Director of Special Programs, Marble Falls ISD'},
  {text:'This is the next step in Friendswood ISD’s efforts to create the safest learning environments possible for students and staff.',author:'Thad Roher',role:'Superintendent, Friendswood ISD'},
  {text:'We have 30 different layers of security protocols in our District and the CENTEGIX Safety Platform is our number 1.',author:'Ty Morrow',role:'Executive Director of Safety, Security & Emergency Management, Brazosport ISD'}
 ];
@@ -102,3 +104,6 @@ document.querySelectorAll('.video-poster').forEach(img=>{
   img.hidden=true;
  }
 });
+
+// Original ATREZZO library modules. Use the native source runtime, not a clone.
+for(const [id,path] of [['ATZ-NAV-002','../components/navegacion/ATZ-NAV-002.js'],['ATZ-SEC-009','../components/secciones/ATZ-SEC-009.js']]){const roots=[...document.querySelectorAll('[data-atz-id="'+id+'"]')];if(roots.length)import(path).then(m=>roots.forEach(root=>m.mount(root))).catch(e=>console.warn(id+' static fallback',e));}
